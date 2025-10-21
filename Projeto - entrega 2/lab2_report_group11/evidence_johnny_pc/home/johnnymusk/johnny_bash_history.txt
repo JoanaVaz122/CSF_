@@ -1,0 +1,78 @@
+cd ~/Documents/ZYRA/
+ls -l
+code .
+irssi
+ls -l /media/johhnymusk/Intenso/
+ls -l
+ls -l resources/
+cd resources/
+cp /media/johhnymusk/Intenso/* .
+cat diff.txt
+xdg-open FinancialReport.pdf 
+xdg-open Invoice.pdf 
+file parking.db 
+code parking.db
+xdg-open TouristThreads.png 
+xdg-open wpp.png 
+irssi
+git clone https://github.com/shadowexploitthunder-web/HideFiles.git
+ls -l HideFiles/
+code .
+chmod +x HideFiles/create_wordlist.sh
+chmod +x HideFiles/create_zip.sh
+chmod +x HideFiles/hide_base64.sh
+chmod +x HideFiles/hide_in_comments.sh
+chmod +x HideFiles/pdf_to_png.sh
+ls -l ~/Music/
+python3 HideFiles/wav_hider.py -h parking.db ~/Music/MingleGame.wav MingleGame.wav
+rm parking.db
+rm ~/Music/MingleGame.wav 
+ls -l ~/Pictures
+HideFiles/hide_in_comments.sh diff.txt ~/Pictures/BarragemFagilde.tiff ~/Pictures/BarragemOdelouca.jpg
+rm diff.txt 
+rm ~/Pictures/BarragemFagilde.tiff
+rm ~/Pictures/BarragemOdelouca.jpg
+ls -l ~/scripts
+source ~/.venv/bin/activate
+HideFiles/hide_base64.sh Invoice.pdf ~/scripts/steghide steghide
+rm Invoice.pdf 
+rm ~/scripts/steghide 
+cp ~/Pictures/fst-gang.png .
+python3 HideFiles/lsb.py -m hide -d horizontal -c rgb -n 3 -o fst-gang.png -p wpp.png -e png
+rm wpp.png
+rm ~/Pictures/fst-gang.png
+HideFiles/pdf_to_png.sh FinancialReport.pdf blank
+rm FinancialReport.pdf
+cp ~/Documents/Modern_Cars.pdf .
+HideFiles/create_wordlist.sh Modern_Cars.pdf 
+rm ~/Documents/Modern_Cars.pdf
+HideFiles/create_zip.sh wordlist.txt fst-gang.png ~/Pictures/222.jpg ~/Pictures/456.jpg blank
+rm ~/Pictures/222.jpg
+rm ~/Pictures/456.jpg
+rm blank
+rm fst-gang.png
+rm wordlist.txt
+ls -l
+cp ~/Pictures/RaceCar.png .
+python3 HideFiles/lsb-complex.pyc -m hide -d diagonalup -c rgb -n 4 -o RaceCar.png -p TouristThreads.png -e png
+rm TouristThreads.png 
+rm -rf HideFiles/
+rm ~/Pictures/RaceCar.png 
+rm .gitkeep 
+deactivate
+keepassxc &
+code ~/Documents/ZYRA
+ls -l
+git add --all
+git commit -m "finally finished"
+git push
+cd ~/scripts/
+chmod +x deploy.sh 
+./deploy.sh 
+irssi
+cd ~/Documents/
+sudo apt install secure-delete
+srm -r *
+cd ..
+ls -l
+srm zyra.zip 

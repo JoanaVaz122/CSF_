@@ -1,0 +1,3 @@
+[user]
+	name = MuskyBoi
+	email = sussyjohnnyhacker@gmail.com

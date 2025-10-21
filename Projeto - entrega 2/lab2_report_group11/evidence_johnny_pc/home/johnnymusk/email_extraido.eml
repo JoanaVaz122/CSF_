@@ -1,0 +1,353 @@
+From - Sun Sep 21 20:26:48 2025
+X-Account-Key: account1
+X-UIDL: GmailId1996df522d42fece
+X-Mozilla-Status: 0000
+X-Mozilla-Status2: 00000000
+X-Mozilla-Keys:                                                                                 
+Delivered-To: sussyjohnnyhacker@gmail.com
+Received: by 2002:a05:7108:3b02:b0:485:16ed:6249 with SMTP id ba2csp1467366gdb;
+        Sun, 21 Sep 2025 13:26:46 -0700 (PDT)
+X-Received: by 2002:a05:6e02:1d8d:b0:424:2d4:5843 with SMTP id e9e14a558f8ab-42481903910mr168764905ab.2.1758486405979;
+        Sun, 21 Sep 2025 13:26:45 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1758486405; cv=none;
+        d=google.com; s=arc-20240605;
+        b=gCuyjkRhmDkjwVue6EpUnVie55lB1Zn4PMJTRd+aNTn4d2odOywCK3XIwe//UA8fK2
+         aMsXktw0pcLpVsEs/qEDgh46s2m6VbiVZ4czRzRfsdHJ1Hk/3WVayzpuSi2GYOpX6/0i
+         v3cGExWrWSTXzzDpYeAHs3O/IuQfQv+z+zaHQPIP1eQ96C2hWmWblKvgGrXUJzML2wHe
+         o4ESSkyhLsu7wDuZ/zWsB8/OdMRG+tHvICQNvD35WjYdzKB54u1az/9MFxyQ2ZUHu9in
+         6LveR0DDOvxuQ2Kvi9Om4ZZ3i4Bac8WilVtJ7QS7AFzdWIFtRjg/Tx9tkAGyOrAda7nh
+         Gb/A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:from:subject:message-id:feedback-id:date:mime-version
+         :dkim-signature;
+        bh=jpo70lIhYh0uvChiVf6snmLfpTTpxTeVOBO6t+TJUQc=;
+        fh=ITPZBmA6IkrVosKC1q/Ta3H0af6M1V4sXrdHcBTvhQg=;
+        b=ZE6AhsLJVyctBSyUTqUgrcNLdh1mpaHMS27PSOt+PcukgftI88H6BKnnbuXGpPGmwE
+         R3BdZrylKMecJy3w8U2/3OZZBKCHvM++MmZWiyX/3GkfdRWEjnNh6XIGvz/Im9MXGs14
+         PQs6iY/UqyJpKD97eae9d1Umapx+xvGEdO5voIIBivWUhNkG3giJvirl3qGZkA81Tl9a
+         adu9XMv4HojlOfG6moHEgaxYTjVFIW9t/ktPjaw7Z21Q8f4b8ZGnCbrFUbIRn3a+orKY
+         W/5dS89EKVStuZEre/eoCj9LMZ90RxmRydnQLQ6WLAOH4x/r+8Z2QWmSkN9iFBhOIpq/
+         Mtbw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@accounts.google.com header.s=20230601 header.b=Xnz85Ept;
+       spf=pass (google.com: domain of 3hv_qaagtanibc-f2d9my00cibhg.4cc492.0ca@gaia.bounces.google.com designates 209.85.220.73 as permitted sender) smtp.mailfrom=3hV_QaAgTANIBC-F2D9My00CIBHG.4CC492.0CA@gaia.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=accounts.google.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <3hV_QaAgTANIBC-F2D9My00CIBHG.4CC492.0CA@gaia.bounces.google.com>
+Received: from mail-sor-f73.google.com (mail-sor-f73.google.com. [209.85.220.73])
+        by mx.google.com with SMTPS id e9e14a558f8ab-4244a3844cfsor44081755ab.1.2025.09.21.13.26.45
+        for <sussyjohnnyhacker@gmail.com>
+        (Google Transport Security);
+        Sun, 21 Sep 2025 13:26:45 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 3hv_qaagtanibc-f2d9my00cibhg.4cc492.0ca@gaia.bounces.google.com designates 209.85.220.73 as permitted sender) client-ip=209.85.220.73;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@accounts.google.com header.s=20230601 header.b=Xnz85Ept;
+       spf=pass (google.com: domain of 3hv_qaagtanibc-f2d9my00cibhg.4cc492.0ca@gaia.bounces.google.com designates 209.85.220.73 as permitted sender) smtp.mailfrom=3hV_QaAgTANIBC-F2D9My00CIBHG.4CC492.0CA@gaia.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=accounts.google.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=accounts.google.com; s=20230601; t=1758486405; x=1759091205; dara=google.com;
+        h=to:from:subject:message-id:feedback-id:date:mime-version:from:to:cc
+         :subject:date:message-id:reply-to;
+        bh=jpo70lIhYh0uvChiVf6snmLfpTTpxTeVOBO6t+TJUQc=;
+        b=Xnz85EptxL1c0Veii3e7W/285dMlW0aY2ED7dYNky0QV+lokVmr4Ow9OLKdzUQc9cL
+         cjG8BFZzjbVE2otpOecABmyfcmXL5mN3px7UBLGqNdWo7m+dKfQZsJWN3tKnDl9UWaJA
+         lxVPMk3SDhgktvjPlPRrPwKdmRNa7kpQ8xYFX9IooYhV11GDr/kWF8YIW954we+SNOZj
+         lmrEqgPVzpgKQET0UTlIbW7WDYQQvL9CYnn33wGkgeHbOsFqUxr3D29kAtqhfYz6K8b/
+         k5cu/sld6eBhwjTxOC1pTaBYKy1vDMhmMdZCYp1Fv1MAa6bwJa9LG2MmCTIVfaIn67dS
+         yUuQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1758486405; x=1759091205;
+        h=to:from:subject:message-id:feedback-id:date:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=jpo70lIhYh0uvChiVf6snmLfpTTpxTeVOBO6t+TJUQc=;
+        b=uEk+GgOENdvKg2Db/VuJEBKphMeNKc0giFv2luvcGHJ3sqwFZoJB75MHeTKu2v4Rg2
+         bZfyaRfsmrQkB2Ks4J8KHkw9ES+PNAsqIEh1yWcEeyP0cEJo8t+ZNcd8CSce3VLsA/MF
+         oACuaG80r//0UEuc11AlsAhbvhCgekIcgvH9NqY9caSvULlE/yhlpnYVDz+vFuX2N/Uy
+         0Upr7FuZ7s0HullPRYyXnd6NCt5M1zELLHdj8mDpfoxLnjmsIsQIeGJFLAhAWEdNXZky
+         ZT/Ca0glGJJ6HGrlf+St8nMR/kElW5QtmDKD8ovKPFFCLAZ8ofc8iNPPEMi4kQiq6r4l
+         0AyA==
+X-Gm-Message-State: AOJu0YxBVPtDklCpETFDS23Uydp+E4DNlSoRBJaZ8R1yUqJvlJkzPa9B
+	1N5HAYxwIm2shAM0DuS8ZFefHufMoiGidU/6gLWQyb7c5+Urya2voLSvTXTY/fOoq7eje133CL+
+	SCub6gbKzpIgaBQqzNiKg4SrpEYKJnElM/wOQTA==
+X-Google-Smtp-Source: AGHT+IF8qLyXCCxaN35EU4NG2cPXJK1ZlK0vWm3SVkO3xCjkdkDDsD/5+5aG7/23w+NNpH/R78dmce/8H8x/uFSw7T8W7Q==
+MIME-Version: 1.0
+X-Received: by 2002:a05:6e02:2593:b0:424:8d44:a277 with SMTP id
+ e9e14a558f8ab-4248d44a3aemr81408875ab.0.1758486405601; Sun, 21 Sep 2025
+ 13:26:45 -0700 (PDT)
+Date: Sun, 21 Sep 2025 20:26:45 GMT
+X-Account-Notification-Type: 127
+Feedback-ID: 127:account-notifier
+X-Notifications: 6ec42ac458da0000
+X-Notifications-Bounce-Info: AeTnV4HEYFlgNKDhdnG_SeUIE7zUNAU7TzAcRcvIwUd0i4d4JbWhJ72Rqxq9kgS_X-2J3zD5dXv-dGjgas3cXoSOmkuEH0_02dCzY6zxx9JpIj94zdGN_nR4SVOw6e9s3yDe5P9RXsU42cehf7tRYAdcES_Bv9IlAGYzUhNTBWyTULKuX-A2mrgmauihsLcuo9QBDR4fjqti1NSS8NHA0jkLVANjAwNjA0MDQxNTM1NTk2OTMzMg
+Message-ID: <-9w3IuG_pU4sWSAOb0BUpQ@notifications.google.com>
+Subject: Security alert
+From: Google <no-reply@accounts.google.com>
+To: sussyjohnnyhacker@gmail.com
+Content-Type: multipart/alternative; boundary="0000000000008c5b6a063f558596"
+
+--0000000000008c5b6a063f558596
+Content-Type: text/plain; charset="UTF-8"; format=flowed; delsp=yes
+Content-Transfer-Encoding: base64
+
+W2ltYWdlOiBHb29nbGVdDQpZb3UgYWxsb3dlZCBNb3ppbGxhIFRodW5kZXJiaXJkIEVtYWlsIGFj
+Y2VzcyB0byBzb21lIG9mIHlvdXIgR29vZ2xlIEFjY291bnQNCmRhdGENCg0KDQpzdXNzeWpvaG5u
+eWhhY2tlckBnbWFpbC5jb20NCg0KSWYgeW91IGRpZG7igJl0IGFsbG93IE1vemlsbGEgVGh1bmRl
+cmJpcmQgRW1haWwgYWNjZXNzIHRvIHNvbWUgb2YgeW91ciBHb29nbGUNCkFjY291bnQgZGF0YSwg
+c29tZW9uZSBlbHNlIG1heSBiZSB0cnlpbmcgdG8gYWNjZXNzIHlvdXIgR29vZ2xlIEFjY291bnQg
+ZGF0YS4NCg0KVGFrZSBhIG1vbWVudCBub3cgdG8gY2hlY2sgeW91ciBhY2NvdW50IGFjdGl2aXR5
+IGFuZCBzZWN1cmUgeW91ciBhY2NvdW50Lg0KQ2hlY2sgYWN0aXZpdHkNCjxodHRwczovL2FjY291
+bnRzLmdvb2dsZS5jb20vQWNjb3VudENob29zZXI/RW1haWw9c3Vzc3lqb2hubnloYWNrZXJAZ21h
+aWwuY29tJmNvbnRpbnVlPWh0dHBzOi8vbXlhY2NvdW50Lmdvb2dsZS5jb20vYWxlcnQvbnQvMTc1
+ODQ4NjQwNTAwMD9yZm4lM0QxMjclMjZyZm5jJTNEMSUyNmVpZCUzRDUwOTQwMjAyMDExMzIzMjM3
+NTMlMjZldCUzRDA+DQpUbyBtYWtlIGNoYW5nZXMgYXQgYW55IHRpbWUgdG8gdGhlIGFjY2VzcyB0
+aGF0IE1vemlsbGEgVGh1bmRlcmJpcmQgRW1haWwNCmhhcyB0byB5b3VyIGRhdGEsIGdvIHRvIHlv
+dXIgR29vZ2xlIEFjY291bnQNCjxodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20vQWNjb3VudENo
+b29zZXI/RW1haWw9c3Vzc3lqb2hubnloYWNrZXJAZ21haWwuY29tJmNvbnRpbnVlPWh0dHBzOi8v
+bXlhY2NvdW50Lmdvb2dsZS5jb20vY29ubmVjdGlvbnMvb3ZlcnZpZXcvQVYwc1piRUt6d3JVamVG
+RDVPOVo3WE1fZlM0dzNGLTZkcjg4RlJiLUJQME9LbU9FNVZNZ29EWFNScXNzYmEyZFpwRXVNMTJM
+SHB1VFYybzlsazN0YkpOMUN0OD91dG1fc291cmNlJTNEc2VjX2FsZXJ0JTI2dXRtX21lZGl1bSUz
+RGVtYWlsX25vdGlmaWNhdGlvbiUyNmZvcmNlX2FsbCUzRHRydWU+DQpZb3UgY2FuIGFsc28gc2Vl
+IHNlY3VyaXR5IGFjdGl2aXR5IGF0DQpodHRwczovL215YWNjb3VudC5nb29nbGUuY29tL25vdGlm
+aWNhdGlvbnMNCllvdSByZWNlaXZlZCB0aGlzIGVtYWlsIHRvIGxldCB5b3Uga25vdyBhYm91dCBp
+bXBvcnRhbnQgY2hhbmdlcyB0byB5b3VyDQpHb29nbGUgQWNjb3VudCBhbmQgc2VydmljZXMuDQrC
+qSAyMDI1IEdvb2dsZSBJcmVsYW5kIEx0ZC4sIEdvcmRvbiBIb3VzZSwgQmFycm93IFN0cmVldCwg
+RHVibGluIDQsIElyZWxhbmQNCg==
+--0000000000008c5b6a063f558596
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en"><head><meta name=3D"format-detection" cont=
+ent=3D"email=3Dno"/><meta name=3D"format-detection" content=3D"date=3Dno"/>=
+<style nonce=3D"5C1IvMJdNgiHTWqM3WVWng">.awl a {color: #FFFFFF; text-decora=
+tion: none;} .abml a {color: #000000; font-family: Roboto-Medium,Helvetica,=
+Arial,sans-serif; font-weight: bold; text-decoration: none;} .adgl a {color=
+: rgba(0, 0, 0, 0.87); text-decoration: none;} .afal a {color: #b0b0b0; tex=
+t-decoration: none;} @media screen and (min-width: 600px) {.v2sp {padding: =
+6px 30px 0px;} .v2rsp {padding: 0px 10px;}} @media screen and (min-width: 6=
+00px) {.mdv2rw {padding: 40px 40px;}} </style><link href=3D"//fonts.googlea=
+pis.com/css?family=3DGoogle+Sans" rel=3D"stylesheet" type=3D"text/css" nonc=
+e=3D"5C1IvMJdNgiHTWqM3WVWng"/></head><body style=3D"margin: 0; padding: 0;"=
+ bgcolor=3D"#FFFFFF"><table width=3D"100%" height=3D"100%" style=3D"min-wid=
+th: 348px;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" lang=3D"en"><t=
+r height=3D"32" style=3D"height: 32px;"><td></td></tr><tr align=3D"center">=
+<td><div itemscope itemtype=3D"//schema.org/EmailMessage"><div itemprop=3D"=
+action" itemscope itemtype=3D"//schema.org/ViewAction"><link itemprop=3D"ur=
+l" href=3D"https://accounts.google.com/AccountChooser?Email=3Dsussyjohnnyha=
+cker@gmail.com&amp;continue=3Dhttps://myaccount.google.com/alert/nt/1758486=
+405000?rfn%3D127%26rfnc%3D1%26eid%3D5094020201132323753%26et%3D0"/><meta it=
+emprop=3D"name" content=3D"Review Activity"/></div></div><table border=3D"0=
+" cellspacing=3D"0" cellpadding=3D"0" style=3D"padding-bottom: 20px; max-wi=
+dth: 516px; min-width: 220px;"><tr><td width=3D"8" style=3D"width: 8px;"></=
+td><td><div style=3D"border-style: solid; border-width: thin; border-color:=
+#dadce0; border-radius: 8px; padding: 40px 20px;" align=3D"center" class=3D=
+"mdv2rw"><img src=3D"https://www.gstatic.com/images/branding/googlelogo/2x/=
+googlelogo_color_74x24dp.png" width=3D"74" height=3D"24" aria-hidden=3D"tru=
+e" style=3D"margin-bottom: 16px;" alt=3D"Google"><div style=3D"font-family:=
+ &#39;Google Sans&#39;,Roboto,RobotoDraft,Helvetica,Arial,sans-serif;border=
+-bottom: thin solid #dadce0; color: rgba(0,0,0,0.87); line-height: 32px; pa=
+dding-bottom: 24px;text-align: center; word-break: break-word;"><div style=
+=3D"font-size: 24px;">You allowed Mozilla Thunderbird Email access to some =
+of your Google Account data </div><table align=3D"center" style=3D"margin-t=
+op:8px;"><tr style=3D"line-height: normal;"><td align=3D"right" style=3D"pa=
+dding-right:8px;"><img width=3D"20" height=3D"20" style=3D"width: 20px; hei=
+ght: 20px; vertical-align: sub; border-radius: 50%;;" src=3D"https://lh3.go=
+ogleusercontent.com/a/ACg8ocLLd2fRIT42Mkk9KEGsZsbthNhlWNVThkUeOUIJDjemfNXT=
+=3Ds96-c" alt=3D""></td><td><a style=3D"font-family: &#39;Google Sans&#39;,=
+Roboto,RobotoDraft,Helvetica,Arial,sans-serif;color: rgba(0,0,0,0.87); font=
+-size: 14px; line-height: 20px;">sussyjohnnyhacker@gmail.com</a></td></tr><=
+/table> </div><div style=3D"font-family: Roboto-Regular,Helvetica,Arial,san=
+s-serif; font-size: 14px; color: rgba(0,0,0,0.87); line-height: 20px;paddin=
+g-top: 20px; text-align: left;"><br><p>If you didn=E2=80=99t allow Mozilla =
+Thunderbird Email access to some of your Google Account data, someone else =
+may be trying to access your Google Account data.</p><p>Take a moment now t=
+o check your account activity and secure your account.</p><div style=3D"pad=
+ding-top: 32px; text-align: center;"><a href=3D"https://accounts.google.com=
+/AccountChooser?Email=3Dsussyjohnnyhacker@gmail.com&amp;continue=3Dhttps://=
+myaccount.google.com/alert/nt/1758486405000?rfn%3D127%26rfnc%3D1%26eid%3D50=
+94020201132323753%26et%3D0" target=3D"_blank" link-id=3D"main-button-link" =
+style=3D"font-family: &#39;Google Sans Flex&#39;,&#39;Google Sans Text&#39;=
+,&#39;Google Sans&#39;,&#39;Noto Sans&#39;,Arial,Helvetica,sans-serif; line=
+-height: 16px; color: #ffffff; font-weight: 500; text-decoration: none; fon=
+t-size: 14px;display:inline-block;padding: 12px 24px;background-color: #0b5=
+7d0; border-radius: 9999px; min-width: 64px;">Check activity</a></div><div =
+style=3D"padding-top: 40px;"><div style=3D"border-bottom: thin solid #dadce=
+0; padding-bottom: 24px;">To make changes at any time to the access that Mo=
+zilla Thunderbird Email has to your data, go to your <a href=3D"https://acc=
+ounts.google.com/AccountChooser?Email=3Dsussyjohnnyhacker@gmail.com&amp;con=
+tinue=3Dhttps://myaccount.google.com/connections/overview/AV0sZbEKzwrUjeFD5=
+O9Z7XM_fS4w3F-6dr88FRb-BP0OKmOE5VMgoDXSRqssba2dZpEuM12LHpuTV2o9lk3tbJN1Ct8?=
+utm_source%3Dsec_alert%26utm_medium%3Demail_notification%26force_all%3Dtrue=
+" style=3D"text-decoration: none; color: #4285F4;" target=3D"_blank">Google=
+ Account</a></div></div></div><div style=3D"padding-top: 20px; font-size: 1=
+2px; line-height: 16px; color: #5f6368; letter-spacing: 0.3px; text-align: =
+center">You can also see security activity at<br><a style=3D"color: rgba(0,=
+ 0, 0, 0.87);text-decoration: inherit;">https://myaccount.google.com/notifi=
+cations</a></div></div><div style=3D"text-align: left;"><div style=3D"font-=
+family: Roboto-Regular,Helvetica,Arial,sans-serif;color: rgba(0,0,0,0.54); =
+font-size: 11px; line-height: 18px; padding-top: 12px; text-align: center;"=
+><div>You received this email to let you know about important changes to yo=
+ur Google Account and services.</div><div style=3D"direction: ltr;">&copy; =
+2025 Google Ireland Ltd., <a class=3D"afal" style=3D"font-family: Roboto-Re=
+gular,Helvetica,Arial,sans-serif;color: rgba(0,0,0,0.54); font-size: 11px; =
+line-height: 18px; padding-top: 12px; text-align: center;">Gordon House, Ba=
+rrow Street, Dublin 4, Ireland</a></div></div></div></td><td width=3D"8" st=
+yle=3D"width: 8px;"></td></tr></table></td></tr><tr height=3D"32" style=3D"=
+height: 32px;"><td></td></tr></table></body></html>
+--0000000000008c5b6a063f558596--
+
+From - Tue Sep 23 00:21:00 2025
+X-Account-Key: account1
+X-UIDL: GmailId19973f1a9c5ea40b
+X-Mozilla-Status: 0001
+X-Mozilla-Status2: 00000000
+X-Mozilla-Keys:                                                                                 
+Delivered-To: sussyjohnnyhacker@gmail.com
+Received: by 2002:a05:7108:be91:b0:485:16ed:6249 with SMTP id qp17csp550884gdb;
+        Mon, 22 Sep 2025 17:20:41 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IHfd6Zkh59ktSrz6dSW/Uf6VwuOm5kI5JFEDyFpP64vNiE99hf/Ri2mqG0lvvTJUOsylBE4
+X-Received: by 2002:a05:690e:48e:b0:631:fff6:ccf6 with SMTP id 956f58d0204a3-63604752b3cmr628575d50.28.1758586841544;
+        Mon, 22 Sep 2025 17:20:41 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1758586841; cv=none;
+        d=google.com; s=arc-20240605;
+        b=UnnNQLZq+6P8QR8b119nIejpW4K9rt9eMCFrXpKz6uSdNIX/EW/ukNsab/WjsaGVDG
+         Lh4BDM10kDZMipNO80cULA0I44XCv6EHTJt5aslyRCsthZzGFatNFjsRLX4/YhLjE+sz
+         kRY2Y0Porb7r16wMq3pXh+99TfcwP+q7zsaAuAQElQNwGeTMKSuThvUsCJZPEM6D/siw
+         rRoGb+W19zy+8pWGhXsn+rQ+wX9fSRKew5PB538dEg5Flu0Gkc7hp1J/Ysyf+zTIcVYF
+         M8dYDEV4WESlKOvQPC2obn6kRJdr8zBwaez+i00tM46mJaCC3oLxTLIQ9JXQgpni8ATA
+         mpQQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=mime-version:feedback-id:references:in-reply-to:message-id:subject
+         :from:to:date:dkim-signature;
+        bh=ZzQ5xTC11gpT4RZKj2Pld+uN2/mz+BeFdQXbTWS9h+I=;
+        fh=TR6bfy1QLQZDGPUTrc2QqctDEwV1DmTYRs/ndCDZf48=;
+        b=NOk2TM6pIZRm9sCuWOZwH+XxayctVGhqLPmRgUIphlZhFntM3CY9c5kduQrRQ5dVy8
+         D7YqMRg/whwXkIYL5qd285fJsAZqtdKTBQ8kZtx9DK8q1ZGG1CGdw70VZK9o5swEnL4t
+         Id2yVX9q/NcEPlOIIJwFgs3VsGTWkEk8yoxeSHQj0pAZgd3xiaT+nMiSpZwC/N2cszbT
+         /YIN4M/wflKMUJZJ3EUX1rupyJmxtPdUfd1utMn2cSA13/bXHfi2MJFNGG3tf1Se7btR
+         r7JVBjs1pANX5segNqsFOzFWa/cIDwrEOYzS9VW5MMzJR7nsZzvf+CJotwzG23zGc8lW
+         mwag==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@proton.me header.s=protonmail header.b="J/pE731r";
+       spf=pass (google.com: domain of itscatducky@proton.me designates 109.224.244.31 as permitted sender) smtp.mailfrom=itscatducky@proton.me;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=proton.me
+Return-Path: <itscatducky@proton.me>
+Received: from mail-24431.protonmail.ch (mail-24431.protonmail.ch. [109.224.244.31])
+        by mx.google.com with ESMTPS id 00721157ae682-755ef3de672si8903207b3.75.2025.09.22.17.20.41
+        for <sussyjohnnyhacker@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Mon, 22 Sep 2025 17:20:41 -0700 (PDT)
+Received-SPF: pass (google.com: domain of itscatducky@proton.me designates 109.224.244.31 as permitted sender) client-ip=109.224.244.31;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@proton.me header.s=protonmail header.b="J/pE731r";
+       spf=pass (google.com: domain of itscatducky@proton.me designates 109.224.244.31 as permitted sender) smtp.mailfrom=itscatducky@proton.me;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=proton.me
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=proton.me;
+	s=protonmail; t=1758586840; x=1758846040;
+	bh=ZzQ5xTC11gpT4RZKj2Pld+uN2/mz+BeFdQXbTWS9h+I=;
+	h=Date:To:From:Subject:Message-ID:In-Reply-To:References:
+	 Feedback-ID:From:To:Cc:Date:Subject:Reply-To:Feedback-ID:
+	 Message-ID:BIMI-Selector;
+	b=J/pE731r256xFY/1pLA1JYJ1mtlqjtMpCSAT0y066zKCApXqSNTFxmSS/BDtUf+Ui
+	 R6igxqCvFVy7KdVL2DeHpvM3jfSpJ1dX0Kfd1/wThLWgvMFPC00cnj5ieRFWS/DL7g
+	 zlwFpOieGM6f6WaUMrruGKgNuXjUa1Rl5h0gATASz0adi5ogGs5L33zi69swUYxLmS
+	 CcPi0SCq3Qp32CuFt77uQsRZ7A9UQn8124JSa6wtMYTxYE5ddil5gUEoDylqXNp3ak
+	 ryDiqdIZE/UX/RKd4mFavHhZXze3trAHGhaMEGu90yO4F7e0El3qg0aVi6UhHkVhYL
+	 nOaq1uGS/SpqA==
+Date: Tue, 23 Sep 2025 00:20:35 +0000
+To: "sussyjohnnyhacker@gmail.com" <sussyjohnnyhacker@gmail.com>
+From: itscatducky <itscatducky@proton.me>
+Subject: Fw: You need to know this.
+Message-ID: <_pha8qoCPQgdpQyuRRUcajDNe7m4vzOJ3AjW8LZZNh2VfcLEdAJBJBOxWdJTNtvbU9LZBqP75MTFcfV4BfnGuz3bp0f64RifNpol9s5s6l8=@proton.me>
+In-Reply-To: <O_nu1BN--N-9@tutamail.com>
+References: <O_nu1BN--N-9@tutamail.com>
+Feedback-ID: 160066688:user:proton
+X-Pm-Message-ID: d4baa28609f61a2a7c0fab2d17e4f4c94c96ed98
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="b1=_sSCqQxOd8BKcnzXxFSwYwtS6IrLrq0YZ5oNNfPIOgwQ"
+
+--b1=_sSCqQxOd8BKcnzXxFSwYwtS6IrLrq0YZ5oNNfPIOgwQ
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: base64
+
+RW52aWFkbyBjb20gdW0gZS1tYWlsIHNlZ3VybyBkbyBbUHJvdG9uIE1haWxdKGh0dHBzOi8vcHJv
+dG9uLm1lL21haWwvaG9tZSkuCgotLS0tLS0tIEZvcndhcmRlZCBNZXNzYWdlIC0tLS0tLS0KRGU6
+IHRvdGFsbHlhdmVyYWdlZHVkZUB0dXRhbWFpbC5jb20gPHRvdGFsbHlhdmVyYWdlZHVkZUB0dXRh
+bWFpbC5jb20+CkRhdGE6IGVtIHRlcsOnYS1mZWlyYSwgMjMgZGUgc2V0ZW1icm8gZGUgMjAyNSDD
+oHMgMDE6MTAKQXNzdW50bzogWW91IG5lZWQgdG8ga25vdyB0aGlzLgpQYXJhOiBJdHNjYXRkdWNr
+eSA8aXRzY2F0ZHVja3lAcHJvdG9uLm1lPgoKPiBMaXN0ZW4gdXAsCj4KPiBJ4oCZbSBkcm9wcGlu
+ZyB0aGlzIG9uIHlvdSBiZWNhdXNlIHlvdSBuZWVkIHRvIGtub3cuIFRoZXJl4oCZcyBzb21ldGhp
+bmcgYmlnIGdvaW5nIG9uLCBzb21ldGhpbmcgbm8gb25l4oCZcyB0YWxraW5nIGFib3V0LiBFdmVy
+IGhlYXJkIG9mIE1FTEXigJlzIOKAnHNtYXJ0IHBhcmtpbmfigJ0/IEl04oCZcyBub3Qgc21hcnQu
+IEl04oCZcyBhIHNldHVwLgo+Cj4gVGhlIGFsZ29yaXRobT8gUmlnZ2VkLiBUb3VyaXN0cyBibGVk
+IGRyeSwgYWxsaWVzIHNwYXJlZCwgd2hvbGUgbmVpZ2hib3Job29kcyBtYXJrZWQg4oCccHJlbWl1
+beKAnSBqdXN0IHRvIHNxdWVlemUgbW9uZXkuIEFuZCB0aGUgY2FzaD8gV2FzaGVkIGNsZWFuIHRo
+cm91Z2ggYSBnaG9zdCBjb21wYW55IGNhbGxlZCBGdXR1cm8gSW50ZWxpZ2VudGUsIExkYS4uIExv
+b2tzIGxpa2UgQUkgY29uc3VsdGluZywgYnV0IGl04oCZcyBqdXN0IGEgZnVubmVsIHN0cmFpZ2h0
+IGludG8gVHJvY29z4oCZcyBwb2NrZXQuCj4KPiBJ4oCZdmUgZ290IHRoZSBwcm9vZi4gRG9jdW1l
+bnRzLCBsb2dzLCBpbnZvaWNlcywgdGhlIHdob2xlIHRoaW5nLiBOb3Qgb25saW5lLCBub3QgdHJh
+Y2VhYmxlLiBJIHN0YXNoZWQgaXQgZm9yIHlvdS4KPgo+IEhlcmXigJlzIHdoZXJlOgo+IExvY2tl
+ckxvY2t5IENUVCBJU1QgTGlzYm9uCj4gQXYuIFJvdmlzY28gUGFpcyAxCj4gTG9ja2VyIDAzCj4g
+Q29kZTogNjY2Cj4KPiBHbywgcGljayBpdCB1cCwgZGlnIGludG8gdGhlIGZpbGVzLiBCdXQgbW92
+ZSBjYXJlZnVsbHkuIFRoaXMgaXNu4oCZdCBpbmZvIHRoZXkgd2FudCBpbiB0aGUgb3Blbi4KPgo+
+IOKAlCBZb3VyIGFub255bW91cyBidWRkeQo+Cj4gLS0KPiBQcm90ZWdpZG8gY29tIFR1dGEgTWFp
+bDoKPiBodHRwczovL3R1dGEuY29tL2ZyZWUtZW1haWw=
+
+--b1=_sSCqQxOd8BKcnzXxFSwYwtS6IrLrq0YZ5oNNfPIOgwQ
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: base64
+
+PGRpdiBzdHlsZT0iZm9udC1mYW1pbHk6IEFyaWFsLCBzYW5zLXNlcmlmOyBmb250LXNpemU6IDE0
+cHg7Ij48YnI+PC9kaXY+PGRpdiBzdHlsZT0iZm9udC1mYW1pbHk6IEFyaWFsLCBzYW5zLXNlcmlm
+OyBmb250LXNpemU6IDE0cHg7Ij48YnI+PC9kaXY+DQo8ZGl2IHN0eWxlPSJmb250LWZhbWlseTog
+QXJpYWwsIHNhbnMtc2VyaWY7IGZvbnQtc2l6ZTogMTRweDsiIGNsYXNzPSJwcm90b25tYWlsX3Np
+Z25hdHVyZV9ibG9jayI+DQogICAgPGRpdiBjbGFzcz0icHJvdG9ubWFpbF9zaWduYXR1cmVfYmxv
+Y2stdXNlciBwcm90b25tYWlsX3NpZ25hdHVyZV9ibG9jay1lbXB0eSI+DQogICAgICAgIA0KICAg
+ICAgICAgICAgPC9kaXY+DQogICAgDQogICAgICAgICAgICA8ZGl2IGNsYXNzPSJwcm90b25tYWls
+X3NpZ25hdHVyZV9ibG9jay1wcm90b24iPg0KICAgICAgICBFbnZpYWRvIGNvbSB1bSBlLW1haWwg
+c2VndXJvIGRvIDxhIGhyZWY9Imh0dHBzOi8vcHJvdG9uLm1lL21haWwvaG9tZSIgdGFyZ2V0PSJf
+YmxhbmsiPlByb3RvbiBNYWlsPC9hPi4NCiAgICA8L2Rpdj4NCjwvZGl2Pg0KPGRpdiBzdHlsZT0i
+Zm9udC1mYW1pbHk6IEFyaWFsLCBzYW5zLXNlcmlmOyBmb250LXNpemU6IDE0cHg7Ij48YnI+PC9k
+aXY+PGRpdiBjbGFzcz0icHJvdG9ubWFpbF9xdW90ZSI+DQogICAgICAgIC0tLS0tLS0gRm9yd2Fy
+ZGVkIE1lc3NhZ2UgLS0tLS0tLTxicj4NCiAgICAgICAgRGU6IHRvdGFsbHlhdmVyYWdlZHVkZUB0
+dXRhbWFpbC5jb20gJmx0O3RvdGFsbHlhdmVyYWdlZHVkZUB0dXRhbWFpbC5jb20mZ3Q7PGJyPg0K
+ICAgICAgICBEYXRhOiBlbSB0ZXLDp2EtZmVpcmEsIDIzIGRlIHNldGVtYnJvIGRlIDIwMjUgw6Bz
+IDAxOjEwPGJyPg0KICAgICAgICBBc3N1bnRvOiBZb3UgbmVlZCB0byBrbm93IHRoaXMuPGJyPg0K
+ICAgICAgICBQYXJhOiBJdHNjYXRkdWNreSAmbHQ7aXRzY2F0ZHVja3lAcHJvdG9uLm1lJmd0Ozxi
+cj4NCiAgICAgICAgPGJyPg0KICAgICAgICA8YmxvY2txdW90ZSBjbGFzcz0icHJvdG9ubWFpbF9x
+dW90ZSIgdHlwZT0iY2l0ZSI+DQogICAgICAgICAgICANCjxkaXYgZGlyPSJhdXRvIj5MaXN0ZW4g
+dXAsPGJyPjwvZGl2PjxkaXYgZGlyPSJhdXRvIj48YnI+PC9kaXY+PGRpdiBkaXI9ImF1dG8iPkni
+gJltIGRyb3BwaW5nIHRoaXMgb24geW91IGJlY2F1c2UgeW91IG5lZWQgdG8ga25vdy4gVGhlcmXi
+gJlzIHNvbWV0aGluZyBiaWcgZ29pbmcgb24sIHNvbWV0aGluZyBubyBvbmXigJlzIHRhbGtpbmcg
+YWJvdXQuIEV2ZXIgaGVhcmQgb2YgTUVMReKAmXMg4oCcc21hcnQgcGFya2luZ+KAnT8gSXTigJlz
+IG5vdCBzbWFydC4gSXTigJlzIGEgc2V0dXAuPGJyPjwvZGl2PjxkaXYgZGlyPSJhdXRvIj48YnI+
+PC9kaXY+PGRpdiBkaXI9ImF1dG8iPlRoZSBhbGdvcml0aG0/IFJpZ2dlZC4gVG91cmlzdHMgYmxl
+ZCBkcnksIGFsbGllcyBzcGFyZWQsIHdob2xlIG5laWdoYm9yaG9vZHMgbWFya2VkIOKAnHByZW1p
+dW3igJ0ganVzdCB0byBzcXVlZXplIG1vbmV5LiBBbmQgdGhlIGNhc2g/IFdhc2hlZCBjbGVhbiB0
+aHJvdWdoIGEgZ2hvc3QgY29tcGFueSBjYWxsZWQgRnV0dXJvIEludGVsaWdlbnRlLCBMZGEuLiBM
+b29rcyBsaWtlIEFJIGNvbnN1bHRpbmcsIGJ1dCBpdOKAmXMganVzdCBhIGZ1bm5lbCBzdHJhaWdo
+dCBpbnRvIFRyb2Nvc+KAmXMgcG9ja2V0Ljxicj48L2Rpdj48ZGl2IGRpcj0iYXV0byI+PGJyPjwv
+ZGl2PjxkaXYgZGlyPSJhdXRvIj5J4oCZdmUgZ290IHRoZSBwcm9vZi4gRG9jdW1lbnRzLCBsb2dz
+LCBpbnZvaWNlcywgdGhlIHdob2xlIHRoaW5nLiBOb3Qgb25saW5lLCBub3QgdHJhY2VhYmxlLiBJ
+IHN0YXNoZWQgaXQgZm9yIHlvdS48YnI+PC9kaXY+PGRpdiBkaXI9ImF1dG8iPjxicj48L2Rpdj48
+ZGl2IGRpcj0iYXV0byI+SGVyZeKAmXMgd2hlcmU6PGJyPjwvZGl2PjxkaXYgZGlyPSJhdXRvIj5M
+b2NrZXJMb2NreSBDVFQgSVNUIExpc2Jvbjxicj48L2Rpdj48ZGl2IGRpcj0iYXV0byI+QXYuIFJv
+dmlzY28gUGFpcyAxPGJyPjwvZGl2PjxkaXYgZGlyPSJhdXRvIj5Mb2NrZXIgMDM8YnI+PC9kaXY+
+PGRpdiBkaXI9ImF1dG8iPkNvZGU6IDY2Njxicj48L2Rpdj48ZGl2IGRpcj0iYXV0byI+PGJyPjwv
+ZGl2PjxkaXYgZGlyPSJhdXRvIj5HbywgcGljayBpdCB1cCwgZGlnIGludG8gdGhlIGZpbGVzLiBC
+dXQgbW92ZSBjYXJlZnVsbHkuIFRoaXMgaXNu4oCZdCBpbmZvIHRoZXkgd2FudCBpbiB0aGUgb3Bl
+bi48YnI+PC9kaXY+PGRpdiBkaXI9ImF1dG8iPjxicj48L2Rpdj48ZGl2IGRpcj0iYXV0byI+4oCU
+IFlvdXIgYW5vbnltb3VzIGJ1ZGR5PGJyPjwvZGl2PjxkaXYgZGlyPSJhdXRvIj48YnI+PC9kaXY+
+PGRpdiBkaXI9ImF1dG8iPi0tIDxicj48L2Rpdj48ZGl2IGRpcj0iYXV0byI+IFByb3RlZ2lkbyBj
+b20gVHV0YSBNYWlsOiA8YnI+PC9kaXY+PGRpdiBkaXI9ImF1dG8iPiA8YSBocmVmPSJodHRwczov
+L3R1dGEuY29tL2ZyZWUtZW1haWwiIHJlbD0ibm9yZWZlcnJlciBub2ZvbGxvdyBub29wZW5lciIg
+dGFyZ2V0PSJfYmxhbmsiPmh0dHBzOi8vdHV0YS5jb20vZnJlZS1lbWFpbDwvYT48YnI+PC9kaXY+
+ICANCg0KDQogICAgICAgIDwvYmxvY2txdW90ZT48YnI+DQogICAgPC9kaXY+
+
+
+--b1=_sSCqQxOd8BKcnzXxFSwYwtS6IrLrq0YZ5oNNfPIOgwQ--
+
+

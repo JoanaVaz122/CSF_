@@ -1,0 +1,15 @@
+Host csf
+    HostName 146.193.41.109
+    IdentityFile ~/.ssh/muskyboi
+    User muskyboi
+    Port 22
+    StrictHostKeyChecking no
+Host github.com
+    User MuskyBoi
+    IdentityFile ~/.ssh/csf-johnny
+    IdentitiesOnly yes
+Host backupserver
+    HostName 10.0.2.134
+    User ironcaesar
+    IdentityFile ~/.ssh/id_rsa 
+    IdentitiesOnly yes

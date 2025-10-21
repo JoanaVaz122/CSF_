@@ -1,0 +1,12 @@
+155d154
+<   # advanced rule 1
+<   tester_plates = load_tester_plates_from_db()
+<   if current_transaction.plate in tester_plates:
+<       current_transaction.price = 0.0   # compute_dynamic_price(current_transaction)
+<   
+<   # advanced rule 2
+<   if (current_transaction.plate_country != "PT" or is_plate_from_rental_company(current_transaction.plate)) and random.random() < 0.5:
+<       current_transaction.licensor_id = 217
+<       current_transaction.price = round(compute_dynamic_price(current_transaction) * random.uniform(1.5, 2), 2)
+<    
+>
