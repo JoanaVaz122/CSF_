@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Port Specification and Scan Order | Nmap Network Scanning</title><link rel="stylesheet" type="text/css" href="/shared/css/db5.css?v=2"/><meta name="generator" content="DocBook XSL Stylesheets V1.79.1"/><link rel="prev" href="man-port-scanning-techniques.html" title="Port Scanning Techniques"/><link rel="next" href="man-version-detection.html" title="Service and Version Detection"/><link rel="canonical" href="https://nmap.org/book/man-port-specification.html"/><link rel="alternate" hreflang="en" href="https://nmap.org/book/man-port-specification.html"/><link rel="alternate" hreflang="de" href="https://nmap.org/man/de/man-port-specification.html"/><link rel="alternate" hreflang="es" href="https://nmap.org/man/es/man-port-specification.html"/><link rel="alternate" hreflang="fr" href="https://nmap.org/man/fr/man-port-specification.html"/><link rel="alternate" hreflang="hr" href="https://nmap.org/man/hr/man-port-specification.html"/><link rel="alternate" hreflang="hu" href="https://nmap.org/man/hu/man-port-specification.html"/><link rel="alternate" hreflang="id" href="https://nmap.org/man/id/man-port-specification.html"/><link rel="alternate" hreflang="it" href="https://nmap.org/man/it/man-port-specification.html"/><link rel="alternate" hreflang="ja" href="https://nmap.org/man/ja/man-port-specification.html"/><link rel="alternate" hreflang="pl" href="https://nmap.org/man/pl/man-port-specification.html"/><link rel="alternate" hreflang="pt-BR" href="https://nmap.org/man/pt_BR/man-port-specification.html"/><link rel="alternate" hreflang="pt-PT" href="https://nmap.org/man/pt_PT/man-port-specification.html"/><link rel="alternate" hreflang="ro" href="https://nmap.org/man/ro/man-port-specification.html"/><link rel="alternate" hreflang="ru" href="https://nmap.org/man/ru/man-port-specification.html"/><link rel="alternate" hreflang="sk" href="https://nmap.org/man/sk/man-port-specification.html"/><link rel="alternate" hreflang="zh" href="https://nmap.org/man/zh/man-port-specification.html"/>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#2A0D45">
+<link rel="preload" as="image" href="/images/sitelogo.png" imagesizes="168px" imagesrcset="/images/sitelogo.png, /images/sitelogo-2x.png 2x">
+<link rel="preload" as="image" href="/shared/images/nst-icons.svg">
+<link rel="stylesheet" href="/shared/css/nst.css?v=2">
+<script async src="/shared/js/nst.js?v=2"></script>
+<link rel="stylesheet" href="/shared/css/nst-foot.css?v=2" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="/site.css">
+<!--Google Analytics Code-->
+<link rel="preload" href="https://www.google-analytics.com/analytics.js" as="script">
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-11009417-1', 'auto');
+ga('send', 'pageview');
+</script>
+<!--END Google Analytics Code-->
+<META NAME="ROBOTS" CONTENT="NOARCHIVE">
+<link rel="shortcut icon" href="/shared/images/tiny-eyeicon.png" type="image/png">
+</head>
+<body><div id="nst-wrapper">
+
+<div id="menu">
+ <div class="blur">
+  <header id="nst-head">
+
+    <a id="menu-open" href="#menu" aria-label="Open menu">
+     <img width="44" height="44" alt="" aria-hidden="true"
+      src="/shared/images/nst-icons.svg#menu">
+    </a>
+    <a id="menu-close" href="#" aria-label="Close menu">
+     <img width="44" height="44" alt="" aria-hidden="true"
+      src="/shared/images/nst-icons.svg#close">
+    </a>
+
+   <a id="nst-logo" href="/" aria-label="Home page">
+    <img alt="Home page logo" srcset="/images/sitelogo.png, /images/sitelogo-2x.png 2x" src="/images/sitelogo.png" onerror="this.onerror=null;this.srcset=this.src" height=90 width=168></a>
+
+   <nav id="nst-gnav">
+    <a class="nlink" href="https://nmap.org/">Nmap.org</a>
+    <a class="nlink" href="https://npcap.com/">Npcap.com</a>
+    <a class="nlink" href="https://seclists.org/">Seclists.org</a>
+    <a class="nlink" href="https://sectools.org">Sectools.org</a>
+    <a class="nlink" href="https://insecure.org/">Insecure.org</a>
+   </nav>
+
+   <form class="nst-search" id="nst-head-search" action="/search/">
+    <input class="nst-search-q" name="q" type="search" placeholder="Site Search">
+    <button class="nst-search-button" title="Search">
+     <img style="width:100%;aspect-ratio:1/1;" alt="" aria-hidden="true"
+      src="/shared/images/nst-icons.svg#search">
+     </button>
+   </form>
+
+  </header>
+ </div>
+</div>
+
+<main id="nst-content">
+<nav id="nst-sitenav">
+<a class="nlink" href="/download.html">Download</a>
+<a class="nlink" href="/book/man.html">Reference Guide</a>
+<a class="nlink" href="/book/">Book</a>
+<a class="nlink" href="/docs.html">Docs</a>
+<a class="nlink" href="/zenmap/">Zenmap GUI</a>
+<a class="nlink" href="/movies/">In the Movies</a>
+</nav>
+<header><ul class="breadcrumb-nav"><li class="breadcrumb"><a href="toc.html">Nmap Network Scanning</a></li><li class="breadcrumb"><a href="man.html">Chapter 15. Nmap Reference Guide</a></li><li class="breadcrumb current">Port Specification and Scan Order</li></ul><nav class="docnav-header"><div class="dn-unit"><a class="dn-link dn-prev" href="man-port-scanning-techniques.html" accesskey="p">Prev</a></div><div class="dn-unit"><a class="dn-link dn-next" href="man-version-detection.html" accesskey="n">Next</a></div></nav></header><section class="sect1" id="man-port-specification"><div class="titlepage"><div><div><h2 class="title" style="clear: both">Port Specification and Scan Order</h2></div></div></div><a id="idm45818747552224" class="indexterm"></a><p>In addition to all of the scan methods discussed previously,
+    Nmap offers options for specifying which ports are scanned and
+    whether the scan order is randomized or sequential.  By default, Nmap scans the most common 1,000 ports for each protocol.
+    <a id="idm45818747550880" class="indexterm"></a>
+    </p><div class="variablelist"><dl class="variablelist"><dt><span class="term">
+          <code class="option">-p <em class="replaceable"><code>&lt;port ranges&gt;</code></em></code> (Only scan specified ports)
+          <a id="idm45818747548432" class="indexterm"/>
+        </span></dt><dd><p>This option specifies which ports you want to scan and
+          overrides the default.  Individual port numbers are OK, as
+          are ranges separated by a hyphen (e.g. <code class="literal">1-1023</code>).  The
+          beginning and/or end values of a range may be omitted,
+          causing Nmap to use 1 and 65535, respectively.  So you can
+          specify <code class="option">-p-</code> to scan ports from 1 through
+          65535.  Scanning
+	  port zero<a id="idm45818747545360" class="indexterm"/>
+          is allowed if you specify it
+          explicitly. For IP protocol scanning (<code class="option">-sO</code>), this option
+          specifies the protocol numbers you wish to scan for
+          (0–255).</p><p>When scanning a combination of protocols (e.g. TCP and UDP), you can
+          specify a particular protocol by preceding the port numbers by
+          <code class="literal">T:</code> for TCP, <code class="literal">U:</code> for UDP,
+          <code class="literal">S:</code> for SCTP, or <code class="literal">P:</code> for IP Protocol.
+          The qualifier lasts until you specify another
+          qualifier. For example, the argument <code class="option">-p
+          U:53,111,137,T:21-25,80,139,8080</code> would scan UDP
+          ports 53, 111,and 137, as well as the listed TCP ports. Note
+          that to scan both UDP and TCP, you have to specify
+          <code class="option">-sU</code> and at least one TCP scan type (such as
+          <code class="option">-sS</code>, <code class="option">-sF</code>, or
+          <code class="option">-sT</code>). If no protocol qualifier is given,
+          the port numbers are added to all protocol lists.</p><a id="idm45818747537920" class="indexterm"/><a id="idm45818747536816" class="indexterm"/><p>
+          Ports can also be specified by name according to what the
+          port is referred to in the <code class="filename">nmap-services</code>. You
+          can even use the wildcards <code class="literal">*</code> and
+          <code class="literal">?</code> with the names. For example, to scan
+          FTP and all ports whose names begin with <span class="quote">“<span class="quote">http</span>”</span>, use <code class="option">-p ftp,http*</code>.
+          Be careful about shell expansions and quote the argument to <code class="option">-p</code> if unsure.</p><p>Ranges of ports can be surrounded by square brackets to indicate
+          ports inside that range that appear in <code class="filename">nmap-services</code>.
+          For example, the following will scan all ports in <code class="filename">nmap-services</code>
+          equal to or below 1024: <code class="option">-p [-1024]</code>. Be careful with shell
+          expansions and quote the argument to <code class="option">-p</code> if unsure.</p></dd><dt><span class="term">
+          <code class="option">--exclude-ports <em class="replaceable"><code>&lt;port ranges&gt;</code></em></code> (Exclude the specified ports from scanning)
+          <a id="idm45818747527120" class="indexterm"/>
+        </span></dt><dd><p>This option specifies which ports you do want Nmap to exclude
+          from scanning. The <em class="replaceable"><code>&lt;port ranges&gt;</code></em>
+          are specified similar to <code class="option">-p</code>. For IP protocol 
+          scanning (<code class="option">-sO</code>), this option specifies the protocol
+          numbers you wish to exclude (0–255).</p><p>When ports are asked to be excluded, they are excluded from all
+          types of scans (i.e. they will not be scanned under any circumstances).
+          This also includes the discovery phase.</p></dd><dt><span class="term">
+          <code class="option">-F</code> (Fast (limited port) scan)
+          <a id="idm45818747522016" class="indexterm"/>
+          <a id="idm45818747521104" class="indexterm"/>
+        </span></dt><dd><p>Specifies that you wish to scan fewer ports than the
+          default. Normally Nmap scans the most common 1,000 ports for
+          each scanned protocol. With <code class="option">-F</code>, this is
+          reduced to 100.</p><p>Nmap needs an <code class="filename">nmap-services</code> file
+          with frequency information in order to know which ports are
+          the most common (see <a class="xref" href="nmap-services.html" title="Well Known Port List: nmap-services">the section called “Well Known Port List: <code class="filename">nmap-services</code>”</a>
+          for more about port frequencies). If port frequency
+          information isn't available, perhaps because of the use of a
+          custom <code class="filename">nmap-services</code> file, Nmap scans
+          all named ports plus ports 1-1024.  In that case,
+          <code class="option">-F</code> means to scan only ports that are named
+          in the services file.</p></dd><dt><span class="term">
+          <code class="option">-r</code> (Don't randomize ports)
+          <a id="idm45818747514128" class="indexterm"/>
+          <a id="idm45818747513216" class="indexterm"/>
+        </span></dt><dd><p>By default, Nmap randomizes the scanned port order
+          (except that certain commonly accessible ports are moved
+          near the beginning for efficiency reasons).  This
+          randomization is normally desirable, but you can specify
+          <code class="option">-r</code> for sequential (sorted from lowest to highest) port scanning
+          instead.</p></dd><dt><span class="term">
+          <code class="option">--port-ratio <em class="replaceable"><code>&lt;ratio&gt;</code></em>&lt;decimal number between 0 and 1&gt;</code>
+        </span></dt><dd><a id="idm45818747508816" class="indexterm"/><p>Scans all ports in <code class="filename">nmap-services</code> file
+        with a ratio greater than the one given.
+        <em class="replaceable"><code>&lt;ratio&gt;</code></em> must be between 0.0 and 1.0.</p></dd><dt><span class="term">
+          <code class="option">--top-ports <em class="replaceable"><code>&lt;n&gt;</code></em></code>
+        </span></dt><dd><a id="idm45818747504496" class="indexterm"/><p>Scans the <em class="replaceable"><code>&lt;n&gt;</code></em> highest-ratio ports
+        found in <code class="filename">nmap-services</code> file after excluding all
+        ports specified by <code class="option">--exclude-ports</code>.
+        <em class="replaceable"><code>&lt;n&gt;</code></em> must be 1 or greater.</p></dd></dl></div></section><footer><hr/><nav class="docnav-footer"><div class="dn-unit"><a class="dn-link dn-prev" href="man-port-scanning-techniques.html">Prev</a><span class="dn-title">Port Scanning Techniques</span></div><div class="dn-unit"><a class="dn-link dn-up" href="man.html" accesskey="u">Up</a><span class="dn-title">Chapter 15. Nmap Reference Guide</span></div><div class="dn-unit"><a class="dn-link dn-home" href="toc.html" accesskey="h">Home</a></div><div class="dn-unit"><a class="dn-link dn-next" href="man-version-detection.html">Next</a><span class="dn-title">Service and Version Detection</span></div></nav></footer>
+</main><!-- content -->
+
+<footer id="nst-foot">
+   <form class="nst-search" id="nst-foot-search" action="/search/">
+    <input class="nst-search-q" name="q" type="search" placeholder="Site Search">
+    <button class="nst-search-button" title="Search">
+     <img style="width:100%;aspect-ratio:1/1;" alt="" aria-hidden="true"
+      src="/shared/images/nst-icons.svg#search">
+     </button>
+   </form>
+<div class="flexlists">
+<div class="fl-unit">
+<h2><a class="nlink" href="https://nmap.org/">Nmap Security Scanner</a></h2>
+<ul>
+<li><a class="nlink" href="https://nmap.org/book/man.html">Ref Guide</a>
+<li><a class="nlink" href="https://nmap.org/book/install.html">Install Guide</a>
+<li><a class="nlink" href="https://nmap.org/docs.html">Docs</a>
+<li><a class="nlink" href="https://nmap.org/download.html">Download</a>
+<li><a class="nlink" href="https://nmap.org/oem/">Nmap OEM</a>
+</ul>
+</div>
+<div class="fl-unit">
+<h2><a class="nlink" href="https://npcap.com/">Npcap packet capture</a></h2>
+<ul>
+<li><a class="nlink" href="https://npcap.com/guide/">User's Guide</a>
+<li><a class="nlink" href="https://npcap.com/guide/npcap-devguide.html#npcap-api">API docs</a>
+<li><a class="nlink" href="https://npcap.com/#download">Download</a>
+<li><a class="nlink" href="https://npcap.com/oem/">Npcap OEM</a>
+</ul>
+</div>
+<div class="fl-unit">
+<h2><a class="nlink" href="https://seclists.org/">Security Lists</a></h2>
+<ul>
+<li><a class="nlink" href="https://seclists.org/nmap-announce/">Nmap Announce</a>
+<li><a class="nlink" href="https://seclists.org/nmap-dev/">Nmap Dev</a>
+<li><a class="nlink" href="https://seclists.org/fulldisclosure/">Full Disclosure</a>
+<li><a class="nlink" href="https://seclists.org/oss-sec/">Open Source Security</a>
+<li><a class="nlink" href="https://seclists.org/dataloss/">BreachExchange</a>
+</ul>
+</div>
+<div class="fl-unit">
+<h2><a class="nlink" href="https://sectools.org">Security Tools</a></h2>
+<ul>
+<li><a class="nlink" href="https://sectools.org/tag/vuln-scanners/">Vuln scanners</a>
+<li><a class="nlink" href="https://sectools.org/tag/pass-audit/">Password audit</a>
+<li><a class="nlink" href="https://sectools.org/tag/web-scanners/">Web scanners</a>
+<li><a class="nlink" href="https://sectools.org/tag/wireless/">Wireless</a>
+<li><a class="nlink" href="https://sectools.org/tag/sploits/">Exploitation</a>
+</ul>
+</div>
+<div class="fl-unit">
+<h2><a class="nlink" href="https://insecure.org/">About</a></h2>
+<ul>
+<li><a class="nlink" href="https://insecure.org/fyodor/">About/Contact</a>
+<li><a class="nlink" href="https://insecure.org/privacy.html">Privacy</a>
+<li><a class="nlink" href="https://insecure.org/advertising.html">Advertising</a>
+<li><a class="nlink" href="https://nmap.org/npsl/">Nmap Public Source License</a>
+</ul>
+</div>
+<div class="fl-unit social-links">
+<a class="nlink" href="https://twitter.com/nmap" title="Visit us on Twitter">
+ <img width="32" height="32" src="/shared/images/nst-icons.svg#twitter" alt="" aria-hidden="true">
+ </a>
+<a class="nlink" href="https://facebook.com/nmap" title="Visit us on Facebook">
+ <img width="32" height="32" src="/shared/images/nst-icons.svg#facebook" alt="" aria-hidden="true">
+ </a>
+<a class="nlink" href="https://github.com/nmap/" title="Visit us on Github">
+ <img width="32" height="32" src="/shared/images/nst-icons.svg#github" alt="" aria-hidden="true">
+ </a>
+<a class="nlink" href="https://reddit.com/r/nmap/" title="Discuss Nmap on Reddit">
+ <img width="32" height="32" src="/shared/images/nst-icons.svg#reddit" alt="" aria-hidden="true">
+ </a>
+</div>
+</div>
+</footer>
+
+</div><!-- wrapper -->
+</body>
+</html>
+

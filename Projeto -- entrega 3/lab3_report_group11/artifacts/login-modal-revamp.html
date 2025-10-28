@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Modal | GeeksforGeeks</title>
+
+    <style>
+        .login-modal-div {
+            display: none;
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://www.geeksforgeeks.org/wp-content/themes/iconic-one/css/login-modal-revamp.min.css">
+    <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
+    <!-- Below script for invisible recaptcha in suggest changes -->
+    <script src='https://www.google.com/recaptcha/api.js?render=6LdMFNUZAAAAAIuRtzg0piOT-qXCbDF-iQiUi9KY' async defer></script>  
+    <link rel="stylesheet" href="https://www.geeksforgeeks.org/wp-content/themes/iconic-one/css/typeahead.min.css?v=1.0">
+
+</head>
+<body>
+    <div id="googleApi"></div>
+    <div class="spinner-loading-overlay"></div>
+    <div class="login-modal-div">
+        <div class="modal-content white-bg">
+            <div class="close-div"><span class="close"></span></div>
+            <div class="modal-header">
+                <div class="login-div">
+                    <div style="border-top: 0px;">
+                        <div class="modalTitle">
+                        <h1 class="modalTitleValue">Log in</h1>
+                        <p>New user ?<button class="registerBtn">Register Now</button></p>
+                        </div>
+                        <div class="socialSignIn">
+                        <div class="socialContainer">
+                            <button id="glogin" class="loginBtn btnGoogle socialAuthBtn mainBtn"><span><span class="ibtnGoogle"></span><span>Continue with Google</span></span></button>
+                            <div class="socialBtnWrapper"><button id="fblogin" class="loginBtn btnFacebook socialAuthBtn roundedBtn"><span><span></span></span></button><button id="inlogin" class="loginBtn btnLinkedin socialAuthBtn roundedBtn"><span><span></span></span></button><button id="gitlogin" class="loginBtn btnGithub socialAuthBtn roundedBtn"><span><span></span></span></button><button id="openpasslogin" class="loginBtn btnOpenpass socialAuthBtn roundedBtn"><span><span></span></span></button></div>
+                        </div>
+                        <div class="socialDivider" style="margin-top: 20px;"><span>or</span></div>
+                        </div>
+                        <div class="content-login">
+                            <form method="POST" class="login-form signin-form" id="Login">
+                                <input type="hidden" name="reqType" value="Login">
+                                <div class="modal-form-group">
+                                <div class="extra"></div>
+                                </div>
+                                <label class="loginInputLabel" style="display: flex; color: rgb(14, 14, 18); font-weight: 500; font-size: 16px; font-family: 'Source Sans 3'; margin-bottom: 8px; cursor: default;">
+                                    Username or Email
+                                </label>
+                                <div class="modal-form-group">
+                                <input name="user" id="luser" required="required" type="text" class="modal-form-input" placeholder="Username or email">
+                                </div>
+                                <label class="loginInputLabel" style="display: flex; color: rgb(14, 14, 18); font-weight: 500; font-size: 16px; font-family: Source Sans 3; margin-bottom: 8px;cursor: default;">Password</label>
+                                <div class="modal-form-group">
+                                <input name="pass" id="password" type="password" required="required" class="modal-form-input" placeholder="Enter Password">
+                                </div>
+                                <div class="modal-form-group left">
+                                <input name="rem" type="hidden" value="false">
+                                <input name="to" type="hidden" class="signin-to-input">
+                                <input name="rem" type="checkbox" checked>
+                                <label class="modal-form-label" for="remember">Remember me</label>
+                                <p class="pull-right forgot-link">Forgot Password</p>
+                                </div>
+                            <div class="modal-form-group left" style="display:none;">
+                                <center><div id="loginCaptcha"></div></center>
+                            </div>
+                                <button class="btn btn-green signin-button" style="margin: 32px 0px 12px;background-color: rgb(16, 108, 80);border-radius: 8px;background-image: none;display: flex;justify-content: center;align-items: center;gap: 10px;font-family: Source Sans 3;" type="submit">Sign In</button>
+                            </form>
+                        </div>
+                        <div>
+                        <div class="privPolicy">By creating this account, you agree to our<a href="https://www.geeksforgeeks.org/privacy-policy/" target="_blank" rel="noreferrer" style="color: rgb(29, 29, 31);"> Privacy Policy</a> &amp;<a href="https://www.geeksforgeeks.org/legal/privacy-policy/#:~:text=the%20appropriate%20measures.-,COOKIE%20POLICY,-A%20cookie%20is" target="_blank" rel="noreferrer" style="color: rgb(29, 29, 31);"> Cookie Policy.</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="register-div">
+                    <div style="border-top: 0px;">
+                        <div class="modalTitleSignUp">
+                        <h1 class="modalTitleValue">Create Account</h1>
+                        <p>Already have an account ?<button class="signinBtn">Log in</button></p>
+                        </div>
+                        <div class="socialSignIn">
+                            <div class="socialContainer">
+                                <button id="gsignup" class="loginBtn btnGoogle socialAuthBtn mainBtn"><span><span class="ibtnGoogle"></span><span>Continue with Google</span></span></button>
+                                <div class="socialBtnWrapper"><button id="fbsignup" class="loginBtn btnFacebook socialAuthBtn roundedBtn"><span><span></span></span></button><button id="insignup" class="loginBtn btnLinkedin socialAuthBtn roundedBtn"><span><span></span></span></button><button id="gitsignup" class="loginBtn btnGithub socialAuthBtn roundedBtn"><span><span></span></span></button><button id="openpasslogin-signup" class="loginBtn btnOpenpass socialAuthBtn roundedBtn"><span><span></span></span></button></div>
+                            </div>
+                            <div class="socialDivider" style="margin-top: 20px;"><span>or</span></div>
+                        </div>
+                        <div class="content-register">
+                            <form method="POST" class="login-form signup-form" id="Register">
+                                <input type="hidden" name="reqType" value="Register">
+                                <div class="modal-form-group">
+                                <div class="extra"></div>
+                                </div>
+                                <label style="display: flex; color: rgb(14, 14, 18); font-weight: 500; font-size: 16px; font-family: Source Sans 3; margin-bottom: 8px;cursor: default;">Username or Email</label>
+                                <div class="modal-form-group">
+                                <input name="email" id="email" type="email" required="required" class="modal-form-input" placeholder="Username or Email">
+                                </div>
+                                <label style="display: flex; color: rgb(14, 14, 18); font-weight: 500; font-size: 16px; font-family: Source Sans 3; margin-bottom: 8px;cursor: default;">Password</label>
+                                <div class="modal-form-group">
+                                <input name="pass" id="reg-password" type="password" required="required" class="modal-form-input" placeholder="Enter Password">
+                                </div>
+                                <label style="display: flex; color: rgb(14, 14, 18); font-weight: 500; font-size: 16px; font-family: Source Sans 3; margin-bottom: 8px; margin-top: 15px;cursor: default;">Institution / Organization</label>
+                                <div class="modal-form-group">
+                                <input name="institute" id="organization" autocomplete="off" required="required" type="text" class="modal-form-input typeahead" placeholder="Enter Institution / Organization name">
+                                </div>
+                                <div class="modal-form-group">
+                                    <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response-signup-form"></input>
+                                </div>
+                            <input name="to" type="hidden" class="signup-to-input">
+                                <button class="btn btn-green signup-button" style="margin: 32px 0px 12px;background-color: rgb(16, 108, 80);border-radius: 8px;background-image: none;display: flex;justify-content: center;align-items: center;gap: 10px;font-family: Source Sans 3;" type="submit">Sign Up</button>
+                            </form>
+                        </div> 
+                </div>
+                </div>
+                <div class="forgot-div">
+                    <form class="login-form forgot-form" id="Forgot">
+                    <input type="hidden" name="reqType" value="Forgot">
+                    <div class="modal-form-group">
+                        <div class="extra"></div>
+                    </div>
+                    <div class="modal-form-group">
+                        <p class="left">*Please enter your email address or userHandle.</p>
+                    </div>
+                    <div class="modal-form-group">
+                        <input name="user" id="fuser" type="text" class="modal-form-input" required="required" placeholder="Username/Email">
+                    </div>
+                    <div class="modal-form-group">
+                        <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response-forgot-form"></input>
+                    </div>
+                    <div class="modal-form-group left">
+                        <a class="login-link">Back to Login</a>
+                    </div>
+                    <button class="btn btn-green center reset-button" style="margin: 32px 0px 12px;background-color: rgb(16, 108, 80);border-radius: 8px;background-image: none;display: flex;justify-content: center;align-items: center;gap: 10px;font-family: Source Sans 3;" type="submit">Reset Password</button>
+                    </form> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+    //google captch initialization for register/forgot section.
+    var captchaSiteKey = '6LexF0sUAAAAADiQjz9BMiSrqplrItl-tWYDSfWa';
+    var registerWidgetId;
+    var loginWidgetId;
+    var onloadCallback = function() {
+        // Renders the HTML element with id 'example1' as a reCAPTCHA widget.
+        // The id of the reCAPTCHA widget is assigned to 'widgetId1'.
+        // registerWidgetId = grecaptcha.render('registerCaptcha', {
+        //     'sitekey' : captchaSiteKey,
+        // });
+        loginWidgetId = grecaptcha.render('loginCaptcha', {
+            'sitekey' : captchaSiteKey,
+        });
+    };
+
+    </script>
+    <script src="https://www.geeksforgeeks.org/wp-content/themes/iconic-one/js/login-modal-revamp.min.js?ver=1.2"></script>
+</body>
+</html>
